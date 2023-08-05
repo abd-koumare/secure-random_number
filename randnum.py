@@ -20,8 +20,8 @@ def constant_time_comparison_str(s1, s2):
     """
         Constant time comparison to prevent timing attack.
         a timing attack is a side-channel attack in which
-        the attacker attempts to compromise a cryptosystem
+        the attacker attempts to compromise a crypto-system
         by analyzing the time taken to execute cryptographic algorithms
 
     """
-    return hmac.compare_digest(bytes(s1), bytes(s2))
+    return hmac.compare_digest(bytes(s1, 'utf-8'), bytes(s2, 'utf-8'))
